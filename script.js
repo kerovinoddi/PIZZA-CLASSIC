@@ -116,6 +116,6 @@ $(document).ready(function(){
 			var estate= $(.estate).val();
 			var street= $(.street).val();
 
-			var amoumt=
+			var amoumt= $( .col)
 });    
     
