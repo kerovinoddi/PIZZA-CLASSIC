@@ -6,5 +6,6 @@ body{
 }
 .col{
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 
 }
