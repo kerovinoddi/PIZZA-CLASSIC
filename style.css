@@ -1,0 +1,10 @@
+body{
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 100;
+	background-color: lavender;
+}
+.col{
+	background-attachment: fixed;
+
+}

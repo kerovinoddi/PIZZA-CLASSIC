@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PIZZA INN</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha384-mlceH9HlqLp7GMKHrj5Ara1+LvdTZVMx4S1U43/NxCvAkzIo8WJ0FE7duLel3wVo"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+
+				<h1>PIZZA INN</h1>
+				<p>Welcome to Pizza inn.</p>
+		<h2>TYPES OF PIZZA</h2>
+		<div class="row">
+			<div class="col" id="newpizza">
+				<img src="pizza img/califonia.jpg" alt="img" class="newyork">
+				<h3>NEW YORK</h3>
+				<div class="newyorktext">
+					<p>This type of pizza is tatsier.It medium thick and can be eaten
+						 with with a fork and a knife. </p>
+				</div>
+                                      
+			</div>
+			<div class="col" id="detro">
+				
+				<img src="pizza img/detroit.jpg" alt="img" class="detroit">
+				<h3>DETROIT</h3>
+				<div class="detroittext">
+					<p>Detroit pizza is nice and thick enough to sustain the heavy and delicious toppings.</p>
+				</div>
+			</div>
+			<div class="col" id="naep">
+				<img src="pizza img/naepolitan.jpg" alt="img" class="naepolitan">
+				<h3>NAEPOLITAN PIZZA</h3>
+				<div class="naepoliantext">
+					<p>Naepolian pizza is very nice and delicious.it has fresh topping that aids in good health.
+						Its easy to eat.can be eaten with afork and a knife.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="prices">
+			<div class="row">     
+                <div class="col-sm-4" id="sizemenu">
+                    <h2>SIZES</h2>
+                    <h3>Small:500</h3>
+                    <h3>Medium:1000</h3>
+                    <h3>Large:1500</h3>
+                </div>
+
+
+
+                <div class="col-sm-4">
+
+                    <h2>CRUST</h2>
+                    <h3>Gluten-free:250</h3><br>
+                    <h3>Stuffed:300</h3><br>
+                    <h3>Cryspy:100</h3><br>
+                </div>
+
+
+
+                <div class="col-sm-4">
+                    <h2>TOPPINGS</h2>
+                    <h3>Sausage:200</h3>
+                    <h3>Fruits:300</h3>
+                    <h3>Oregano:250</h3>
+
+                </div>
+            </div>
+	</div>
+	<div class="form-group">
+		<h3>ORDER YOUR'S</h3>
+
+		<div class="pizza-type">
+
+			<h2>PIZZA TYPE</h2>
+
+			<input type="radio" name="type" class="type" value="new-york-pizza" required>New York Pizza<br>
+
+			<input type="radio" name="type" class="type" value="detroit" required>Detroit<br>
+
+			<input type="radio" name="type" class="type" value="naopolitan-pizza" required>Naepolitan Pizza<br>
+		</div>
+		<div class="pizza-size">
+			<h2>PIZZA SIZE</h2>
+			<input type="radio" name="size" class="size" id="sml" value="small,500" required>Small<br>
+
+			<input type="radio" name="size" class="size" id="mdm" value= "medium.1000" required>medium<br>
+
+			<input type="radio" name="size" class="size" id="lg" value="large,1500" required>Large<br>
+
+		</div>
+
+		<div class="quantity">
+			<h2>QUANTITY REQUIRED</h2>
+		<input type="number" name="quantity" value="" min="1" required><br>
+
+		</div>
+		<div class="crust">
+			<h2>CRUST</h2>
+			<input type="radio" name="crust" value="Crispy, 100" class="crusts" id="crispy" required>Crispy<br>
+
+			<input type="radio" name="crust" value="Glueten-free,250" class="crust" id="glueten-free" required>Glueten-free<br>
+
+			<input type="radio" name="crust" value="stuffed,300" class="crust" id="stuffed" required>Stuffed<br>
+		</div>
+		<div class="topping">
+			<h2>TOPPINGS</h2>
+			<input type="radio" name="topping" class="topping" value="sausage,200" id="sausage" required>Sausage<br>
+
+			<input type="radio" name="topping" class="topping" value="fruits,300" id="fruits" required>Fruits<br>
+
+			<input type="radio" name="topping" class="topping" value="oregano,250" id="oregano" required>Oregano<br>
+		</div>
+		<div class="delivery">
+			<h3>Delivery</h3>
+			<input type="radio" type="delivery" value="1" placeholder="Yes" id="yes" required>Yes<br>
+			<input type="radio" type="delivery" value="2" placeholder="No" id="no" required>No<br>
+		</div>
+		<div class="address">
+			<input type="text" name="name" class="name" placeholder="name">Name<br>
+			<input type="text" name="phone-number" class="phone-number" placeholder="phone-number">Phone Number<br>
+			<input type="text" name="street" class="street" placeholder="street">Street<br>
+			<input type="text" name="city" class="city" placeholder="city">City<br>
+			<input type="text" name="estate" class="estate" placeholder="estate">Estate<br>
+		</div>
+		<input type="submit" id="submit">
+		<div class="show-order">
+
+			<h2>ORDER SUMMARY</h2>
+
+			<p>Pizza Type: <span class="pizza-types"></span></p>
+			<p>Size: <span class="order-size"></span></p>
+			<p>Quantity: <span class="order-quantity"></span></p>
+			<p>Crusts: <span class="order-crusts"></span></p>
+			<p>Toppings:<span class="order-toppings"></span></p>
+
+			<p>Delivery:<span class="delivery-fee"></span></p>
+
+			<p>Total:<span class="order-total"></span></p>
+
+		</div>
+
+		<div class="address-summary">
+
+			<h3>ADDRESS SUMMARY</h3>
+			<p>Name:<span class="user-name"></span></p>
+			<p>Number:<span class="user-number"></span></p>
+			<p>City:<span class="address-city"></span></p>
+			<p>Estate:<span class="address-estate"></span></p>
+			<p>Street:<span class="address-street"></span></p>
+		</div>
+		<div class="footer">
+			<h2>Pizza-Inn</h2>
+			<h4>2020</h4>
+		</div>
+
+
+
+
+	</div>
+	</div>
+	<script src="script.js"></script>
+	
+	
+</body>
+</html>
