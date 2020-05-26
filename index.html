@@ -1,76 +1,142 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PIZZA INN</title>
-	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<title>pizza</title>
 </head>
 
 <body>
+
+	<div class="intro ">
+		<h1 id="hed">PIZZA QUICK DELIVERY</h1>
+		<br>
+	</div>
 	<div class="container">
-		<form id="pizzaOrder">
-			<img src="pizza img/naepolitan.jpg" alt="img">
-			<h2>PIZZA INN</h2>
-			<div class="row">
-				<div class="col-md-4" id="newpizza">
+		<div class="all">
 
-					<button type="submit" class="btn btn-primary" id="btn">Place an order</button>
-					<div class="formShow">
-						<div class="form-group">
-							<label for=""Name></label>
-							<input type="text" name="name" id="name" placeholder="name">
-							<label for="street">Street</label>
-							<input type="text" name="street" id="street" placeholder="street">
-							<label for="estate">Estate</label>
-							<input type="text" name="estate" id="estate" placeholder="estate">
-							<label for="city">City</label>
-							<input type="text" name="city" id="city" placeholder="city">
-							
-						</div>
-				
-					<div class="form-group" id="pizzaForm">
-						<select class="form-control" id="addToppings">
-							<option value="50">sausage</option>
-							<option value="70">beef</option>
-							<option value="100">tomatos</option>
-							<option value="120">chicken</option>
-						</select>
+			<div class="cointainer-fluid">
+				<div class="row">
+					<div class="col-4">
+						<img src="https://cdn.dribbble.com/users/56023/screenshots/789300/plusgame.png" alt=""
+							width="70">
+						<input type="radio" name="round 1" id="small" value="Small size($5">Small size(500ksh)</imput>
 					</div>
-					
-					
-					<div class="form-group" id="pizzaSize">
-						<select class="form-control" id="sizes">
-							<option value="100">small</option>
-							<option value="200">medium</option>
-							<option value="500">large</option>
-						</select>
+					<div class="col-4">
+						<img src="https://cdn.dribbble.com/users/56023/screenshots/789300/plusgame.png" alt=""
+							width="110">
+						<input type="radio" name="round 1" id="medium" value="Medium size($15)">Medium size(1500ksh)</imput>
 					</div>
-					<div class="form-group" id="pizzaCrust">
-							<lable><input type="checkbox" name="crust" value="200">Crumpsy</lable>
-							<lable><input type="checkbox" name="crust" value="300">Stuffed</lable>
-							<lable><input type="checkbox" name="crust" value="400">Glueton-free</lable>
+					<div class="col-4">
+						<img src="https://cdn.dribbble.com/users/56023/screenshots/789300/plusgame.png" alt=""
+							width="150">
+						<input type="radio" name="round 1" id="large" value="Large size($25)">Large size(2500ksh)</imput>
 					</div>
-					<div class="form-group" id="pizzaNotes">
-							<label>Notes</label>
-							<textarea class="form-control" id="notes" placeholder="write your notes"></textarea>
-					</div>
-					<button type="submit" class="btn btn-success" id="addPizza">ORDER</button>
-					</div>
-
-	
-		
 				</div>
 			</div>
-		</form>
-
+			<br>
+			<div class="card-deck">
+				<div class="card" id="item">
+					<h4><strong>MEAT</strong></h4>
+					<hr>
+					<p>select your choice ;</p>
+					<hr>
+					<ul>
+						<li><input type="radio" name="round-1" id="meat1">Chicken(200ksh)</li>
+						<li><input type="radio" name="round-1" id="meat2">Sausage(100ksh)</li>
+						<li><input type="radio" name="round-1" id="meat3">Beef(100ks)</li>
+					</ul>
+				</div>
+				<div class="card" id="item">
+					<h4><strong>CHEESE</strong></h4>
+					<hr>
+					<p>select your choice ;</p>
+					<hr>
+					<ul>
+						<li><input type="radio" name="round-2" id="cheese1">Regular cheese(100ks)</li>
+						<li><input type="radio" name="round-2" id="cheese2">No cheese(0ksh)</li>
+						<li><input type="radio" name="round-2" id="cheese3">Extra cheese(100ksh)</li>
+					</ul>
+				</div>
+			</div><br>
+			<div class="card-deck">
+				<div class="card" id="item">
+					<h4><strong>VEGGIES</strong></h4>
+					<hr>
+					<p>select your choice ;</p>
+					<hr>
+					<ul>
+						<li><input type="radio" name="round-3" id="veggies1">Tommatoes(100ksh)</li>
+						<li><input type="radio" name="round-3" id="veggies2">Pineaple(100ksh)</li>
+						<li><input type="radio" name="round-3" id="veggies3">Spinach(300ksh)</li>
+					</ul>
+				</div>
+				<div class="card" id="item">
+					<h4><strong>CRUST</strong></h4>
+					<hr>
+					<p>select your choice ;</p>
+					<hr>
+					<ul>
+						<li><input type="radio" name="round-4" id="crust1">Crispy(200ksh)</li>
+						<li><input type="radio" name="round-4" id="crust2">Stuffed(300ksh)</li>
+						<li><input type="radio" name="round-4" id="crust3">Gluten-free(100ksh)</li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class='col -12'>
+					<button class='btn btn-warning' type=submit id="submit">Submit Order</button><br>
+					<br>
+					<button id='deliver' class='btn btn-success'>Deliver Now!</button>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div class="card-deck " id="receipt">
+			<div class="card">
+				<h3>Order Recived</h3>
+				<p>This is your receipt on delivery</p>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Size : <span id="size"></span></div>
+					<div id="a"></div>
+				</div>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Meat : <span id="meat"></span></div>
+				</div>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Veggies :<span id="veggies"></span></div>
+				</div>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Chees : <span id="chees"></span></div>
+				</div>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Crust :<span id="crust"></span></div>
+				</div>
+				<hr>
+				<div class="row q">
+					<div class="col-5">Deliver :<span id="deliver"></span></div>
+				</div><br>
+				<hr>
+				<br>
+				<h3>TOTAL</h3>
+			</div><br>
+			<button id='order' class='btn btn-success'>Order Again!</button>
+		</div>
 	</div>
-
+	<script src="js/script.js"></script>
 </body>
-
-<script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
-<script src="js/script.js"></script>
 
 </html>
