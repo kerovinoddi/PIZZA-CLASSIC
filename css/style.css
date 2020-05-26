@@ -12,5 +12,5 @@ body{
 .footer{color: darkslategray;
 }
 #pizzaForm, #pizzaCrust, #pizzaSize, #pizzaNotes, #addPizza{
-	display: none;
+	display: ;
 }

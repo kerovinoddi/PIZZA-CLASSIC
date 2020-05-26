@@ -1,4 +1,4 @@
- 
+ alert('hello')
  
  function pizza(){
 	this.toppings = [];
@@ -12,19 +12,23 @@ pizza.prototype.cost = function() {
 	this.toppings.map(function(topping){
 		cost += topping;
 	});
-	var total = cost + this.size;
+	var total = cost + this.size + this.crust;
 	this.total = "pizza total is:" + "Ksh" + total.toFixed(2);
 };
 
- $(function() {
-	$("#pizzaOrder").submit(function(event){
-		event.preventDefault();
-		var pizza = new Pizza();
-		$("#pizzaForm").fadeIn();
-		$("#formShow").fadeIn();
-		$("#btn button").hide();
-		$("button#addPizza").click(function(){
+//  $(function() {
+// 	$("#pizzaOrder").submit(function(event){
+// 		event.preventDefault();
+// 		var pizza = new Pizza();
+// 		$("#pizzaForm").fadeIn();
+// 		$("#formShow").fadeIn();
+// 		$("#btn button").hide();
+// 		$("button#addPizza").click(function(){
 
-		});
-	});
-});
+// 		});
+$(dociment).ready(function(){
+	$("#pizzaOrder").click(submit(function(){
+		$("#newPizza").fadeIn();
+
+	})
+};
